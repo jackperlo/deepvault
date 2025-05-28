@@ -11,6 +11,8 @@ VALIDATION_LABELS_PATH = './datasets_data/mnist_labels/mnist_validation_labels.n
 VALIDATION_LABELS_2K_PATH = './datasets_data/mnist_labels/mnist_2k_validation_labels.npy' # first 2000 validation labels
 VALIDATION_LABELS_500_PATH = './datasets_data/mnist_labels/mnist_500_validation_labels.npy' # first 500 validation labels
 
+#============================================================
+
 # mnist x Lenet5 uint8 preprocessed train and validation images outputs path
 LENET5_U8_MODEL_PATH = "./models_data/lenet5/lenet5_uint8_mnist.tflite"
 LENET5_U8_TRAIN_SET_PREPROCESSED_PATH = './datasets_data/mnist_x_lenet5/uint8/mnist_u8_lenet5_training'
