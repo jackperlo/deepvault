@@ -3,17 +3,35 @@ This repository brings together a personally curated collection of pre-trained m
 
 If you've ever felt lost in the jungle of scattered links and half-documented models—this is for you. Enjoy!
 
-## How to use
-The repository is divided per datasets.
-1) Go to the dataset you would like to gather a model to be evaluated on
+## How to Use
 
-2.a.) If custom model is wanted: Search for the desired model notebook (e.g. Mnist/CNN/lenet5.ipynb) and train/customize it using the given .ipynb, eventually save it in the desired format (quantized or fp32)
+The repository is organized by dataset. Follow these steps to use a model:
 
-2.b.) If the provided pre-trained model is wanted to be used, launch the download_<model>.sh found in the desired dataset and model folder:
+1. **Choose a Dataset**  
+  Navigate to the folder of the dataset you’re interested in.
 
-```bash download_DESIRED-MODEL.sh```
+2. **Download or Train a Model**
+  Find the corresponding model folder (e.g., `Mnist/CNN/Lenet5`)
 
-or 
+  - **(a) Use a Custom Model**  
+    Use the corresponding notebook to train or customize your model. Once ready, save it in the desired format (FP32/INT8/UINT8).
 
-```chmod +x download_DESIRED-MODEL.sh```
-```./download_DESIRED-MODEL.sh```
+  - **(b) Use a Pre-trained Model**  
+    Run the provided shell script to download the model. For example:
+
+    ```bash
+    bash download_<DESIRED-MODEL>.sh
+    ```
+
+    Or, if needed:
+
+    ```bash
+    chmod +x download_<DESIRED-MODEL>.sh
+    ./download_<DESIRED-MODEL>.sh
+    ```
+
+3. **Preprocess the Dataset**  
+  Use the corresponding `<DS>_preprocessing.ipynb` notebook to preprocess the dataset images correctly and store them in the required format.
+
+4. **Evaluate the Model**  
+  Run evaluation on a portion or the entirety of the preprocessed dataset using the corresponding `<DS>_models_evaluation.ipynb` and choosing the desired model inside the notebook cells.
