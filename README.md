@@ -3,9 +3,18 @@ This repository brings together a personally curated collection of pre-trained m
 
 If you've ever felt lost in the jungle of scattered links and half-documented models—this is for you. Enjoy!
 
+![Accuracy Heatmap](readme_assets/accuracy_map.png)
+
 ## How to Use
 
 The repository is organized by dataset. Follow these steps to use a model:
+
+0. **Clone the repository**
+
+  ```bash
+    git clone https://github.com/jackperlo/deepvault.git
+    cd deepvault
+  ```
 
 1. **Choose a Dataset**  
   Navigate to the folder of the dataset you’re interested in.
