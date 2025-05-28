@@ -3,6 +3,8 @@ This repository brings together a personally curated collection of pre-trained m
 
 If you've ever felt lost in the jungle of scattered links and half-documented models—this is for you. Enjoy!
 
+So far only Tensorflow is suppported.
+
 ![Accuracy Heatmap](readme_assets/accuracy_map.png)
 
 ## How to Use
@@ -26,17 +28,17 @@ The repository is organized by dataset. Follow these steps to use a model:
     Use the corresponding notebook to train or customize your model. Once ready, save it in the desired format (FP32/INT8/UINT8).
 
   - **(b) Use a Pre-trained Model**  
-    Run the provided shell script to download the model. For example:
+    Run the provided `download.sh` shell script to download the desired model. For example:
 
     ```bash
-    bash download_<DESIRED-MODEL>.sh
+    bash download.sh
     ```
 
     Or, if needed:
 
     ```bash
-    chmod +x download_<DESIRED-MODEL>.sh
-    ./download_<DESIRED-MODEL>.sh
+    chmod +x download.sh
+    ./download.sh
     ```
 
 3. **Preprocess the Dataset**  
