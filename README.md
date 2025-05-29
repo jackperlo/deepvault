@@ -83,7 +83,7 @@ The repository is organized by dataset. Follow these steps to use a model:
     Use the corresponding notebook to train or customize your model. Once ready, save it in the desired format (FP32/INT8/UINT8).
 
   - **(b) Use a Pre-trained Model**  
-    Run the provided `download.sh` shell script to download the desired model.
+    Run the provided `download_models.sh` shell script to download the desired model.
 
     ```bash
     bash download.sh
