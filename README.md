@@ -1,7 +1,7 @@
 # deepvault
 # 🧠 Pre-trained Models and Datasets Collection
 
-This repository brings together a personally curated collection of pre-trained models and datasets, created to cut through the noise of searching the internet for reliable and well-documented resources.  
+This repository brings together a curated collection of pre-trained models and datasets, created to cut through the noise of searching the internet for reliable and well-documented resources.  
 My hope is that this grows into a robust pool of reusable, architecture-level models. **Contributions are very welcome!**
 
 > If you've ever felt lost in the jungle of scattered links and incomplete documentation — this is for you. Enjoy!
