@@ -74,13 +74,13 @@ The repository is organized by dataset. Follow these steps to use a model:
   ```
 
 1. **Choose a Dataset**  
-  Navigate to the folder of the dataset you’re interested in.
+  Navigate to the folder of the dataset you’re interested in. (e.g., `Mnist`)
 
 2. **Download or Train a Model**  
-  Find the corresponding model folder (e.g., `Mnist/CNN/Lenet5`)
+  Find the corresponding model folder (e.g., `Mnist/CNN/`)
 
   - **(a) Use a Custom Model**  
-    Use the corresponding notebook to train or customize your model. Once ready, save it in the desired format (FP32/INT8/UINT8).
+    Use the corresponding notebook to train or customize your model (e.g., `Mnist/CNN/lenet5.ipynb`). Once ready, save it in the desired format (FP32/INT8/UINT8) using the notebook.
 
   - **(b) Use a Pre-trained Model**  
     Run the provided `download_models.sh` shell script to download the desired model.
@@ -90,7 +90,7 @@ The repository is organized by dataset. Follow these steps to use a model:
     ```
 
 3. **Preprocess the Dataset**  
-  Use the corresponding `<DS>_preprocessing.ipynb` notebook to preprocess the dataset images correctly and store them in the required format.
+  Use the corresponding `<DS>_preprocessing.ipynb` notebook to preprocess the dataset images correctly and store them in the required format. (e.g., `Mnist/mnist_preprocessing.ipynb`)
 
 4. **Evaluate the Model**  
-  Run evaluation on a portion or the entirety of the preprocessed dataset using the corresponding `<DS>_models_evaluation.ipynb` and choosing the desired model inside the notebook cells.
+  Run evaluation on a portion or the entirety of the preprocessed dataset using the corresponding `<DS>_models_evaluation.ipynb` and choosing the desired model inside the notebook cells. (e.g., `Mnist/mnist_models_evaluation.ipynb`)
