@@ -60,11 +60,17 @@ All models are hosted on the **Hugging Face Hub** for easy download and integrat
 
 The repository is organized by dataset. Follow these steps to use a model:
 
-0. **Clone the repository**
+0. **Clone the repository and install requirements**
 
   ```bash
     git clone https://github.com/jackperlo/deepvault.git
     cd deepvault
+  ```
+
+  ```bash
+  python -m venv venv
+  source venv/bin/activate
+  pip install -r requirements.txt
   ```
 
 1. **Choose a Dataset**  
