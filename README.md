@@ -27,7 +27,7 @@ My hope is that this grows into a robust pool of reusable, architecture-level mo
 **Note:**  
 `imagenet2012` (ILSVRC 2012) is a large-scale image classification dataset. Its distribution is subject to specific academic/research use restrictions.  
 To access this dataset, you must request permission from the official ImageNet website: [https://www.image-net.org/challenges/LSVRC/2012/](https://www.image-net.org/challenges/LSVRC/2012/).  
-Only after approval can you legally download or use the dataset. For this reason, the hosted version is marked as private on Hugging Face.
+Only after approval can you legally download or use the dataset. For this reason, the hosted version is marked as private on Hugging Face [Models and Datasets repository](https://huggingface.co/jack-perlo).
 
 ---
 
