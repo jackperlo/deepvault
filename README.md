@@ -76,7 +76,7 @@ The repository is organized by dataset. Follow these steps to use a model:
 1. **Choose a Dataset**  
   Navigate to the folder of the dataset you’re interested in.
 
-2. **Download or Train a Model**
+2. **Download or Train a Model**  
   Find the corresponding model folder (e.g., `Mnist/CNN/Lenet5`)
 
   - **(a) Use a Custom Model**  
