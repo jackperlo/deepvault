@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define available datasets
-datasets=("mnist" "imagenet2012" "cifar10")
+datasets=("mnist" "imagenet2012" "cifar10", "gtsrb")
 
 #########################################
 # Step 1: Select dataset
@@ -20,10 +20,13 @@ case "$dataset" in
     models=("lenet5")
     ;;
   "imagenet2012")
-    models=("efficientnetb0" "mobilenetv1" "mobilenetv2" "resnet50" "resnet152" "vgg16" "vit_b16_p_224")
+    models=("efficientnetb0" "mobilenet" "mobilenetv2" "resnet50" "resnet152" "vgg16" "vit-b_16p_224")
     ;;
   "cifar10")
-    models=("alexnet" "efficientnetb0" "mobilenetv1" "mobilenetv2" "resnet50" "resnet152" "vgg16")
+    models=("alexnet" "efficientnetb0" "mobilenet" "mobilenetv2" "resnet18" "resnet34" "resnet50" "resnet152" "vgg16")
+    ;;
+  "gtsrb")
+    models=("mobilenet" "mobilenetv2" "resnet18" "resnet34")
     ;;
   *)
     echo "❌ Unsupported dataset."
@@ -41,7 +44,7 @@ done
 # Step 3: Select precision
 #########################################
 case "$model" in
-  "lenet5"|"efficientnetb0"|"mobilenetv1"|"mobilenetv2"|"vgg16"|"vit_b16_p_224"|"alexnet"|'resnet50'|"resnet152")
+  "lenet5"|"efficientnetb0"|"mobilenet"|"mobilenetv2"|"vgg16"|"alexnet"|'resnet18'|'resnet34'|'resnet50'|"resnet152"|"vit-b_16p_224")
     precisions=("fp32" "uint8" "int8")
     ;;
   *)
@@ -56,28 +59,51 @@ select precision in "${precisions[@]}"; do
   echo "❌ Invalid selection."
 done
 
-#########################################
+############################################
 # Compose Hugging Face repo ID and file name
-#########################################
-# repo_id fallback
-if [[ "$model" == "lenet5" ]]; then
-  REPO_ID="jack-perlo/Lenet-5"
-elif [[ "$model" == "resnet50" ]]; then
-  REPO_ID="jack-perlo/ResNet50"
-elif [[ "$model" == "resnet152" ]]; then
-  REPO_ID="jack-perlo/ResNet152"
-elif [[ "$model" == "efficientnetb0" ]]; then
-  REPO_ID="jack-perlo/EfficientNetB0"
-elif [[ "$model" == "mobilenetv1" ]]; then
-  REPO_ID="jack-perlo/MobileNetV1"
-elif [[ "$model" == "mobilenetv2" ]]; then
-  REPO_ID="jack-perlo/MobileNetV2"
-elif [[ "$model" == "vgg16" ]]; then
-  REPO_ID="jack-perlo/VGG16"
-elif [[ "$model" == "vit_b16_p_224" ]]; then
-  REPO_ID="jack-perlo/Vit-B16-P-224"
-elif [[ "$model" == "alexnet" ]]; then
-  REPO_ID="jack-perlo/AlexNet"
+############################################
+if [[ "$model" == "lenet5" && "$dataset" == "mnist" ]]; then
+  REPO_ID="jack-perlo/Lenet5-Mnist"
+elif [[ "$model" == "mobilenet" && "$dataset" == "gtsrb" ]]; then
+  REPO_ID="jack-perlo/MobileNet-Gtsrb"
+elif [[ "$model" == "mobilenetv2" && "$dataset" == "gtsrb" ]]; then
+  REPO_ID="jack-perlo/MobileNetV2-Gtsrb"
+elif [[ "$model" == "resnet18" && "$dataset" == "gtsrb" ]]; then
+  REPO_ID="jack-perlo/ResNet18-Gtsrb"
+elif [[ "$model" == "resnet34" && "$dataset" == "gtsrb" ]]; then
+  REPO_ID="jack-perlo/ResNet34-Gtsrb"
+elif [[ "$model" == "alexnet" && "$dataset" == "cifar10" ]]; then
+  REPO_ID="jack-perlo/AlexNet-Cifar10"
+elif [[ "$model" == "resnet18" && "$dataset" == "cifar10" ]]; then
+  REPO_ID="jack-perlo/ResNet18-Cifar10"
+elif [[ "$model" == "resnet34" && "$dataset" == "cifar10" ]]; then
+  REPO_ID="jack-perlo/ResNet34-Cifar10"
+elif [[ "$model" == "resnet50" && "$dataset" == "cifar10" ]]; then
+  REPO_ID="jack-perlo/ResNet50-Cifar10"
+elif [[ "$model" == "resnet152" && "$dataset" == "cifar10" ]]; then
+  REPO_ID="jack-perlo/ResNet152-Cifar10"
+elif [[ "$model" == "efficientnetb0" && "$dataset" == "cifar10" ]]; then
+  REPO_ID="jack-perlo/EfficientNetB0-Cifar10"
+elif [[ "$model" == "mobilenet" && "$dataset" == "cifar10" ]]; then
+  REPO_ID="jack-perlo/MobileNet-Cifar10"
+elif [[ "$model" == "mobilenetv2" && "$dataset" == "cifar10" ]]; then
+  REPO_ID="jack-perlo/MobileNetV2-Cifar10"
+elif [[ "$model" == "vgg16" && "$dataset" == "cifar10" ]]; then
+  REPO_ID="jack-perlo/Vgg16-Cifar10"
+elif [[ "$model" == "resnet50" && "$dataset" == "imagenet2012" ]]; then
+  REPO_ID="jack-perlo/ResNet50-ImageNet2012"
+elif [[ "$model" == "resnet152" && "$dataset" == "imagenet2012" ]]; then
+  REPO_ID="jack-perlo/ResNet152-ImageNet2012"
+elif [[ "$model" == "efficientnetb0" && "$dataset" == "imagenet2012" ]]; then
+  REPO_ID="jack-perlo/EfficientNetB0-ImageNet2012"
+elif [[ "$model" == "mobilenet" && "$dataset" == "imagenet2012" ]]; then
+  REPO_ID="jack-perlo/MobileNet-ImageNet2012"
+elif [[ "$model" == "mobilenetv2" && "$dataset" == "imagenet2012" ]]; then
+  REPO_ID="jack-perlo/MobileNetV2-ImageNet2012"
+elif [[ "$model" == "vgg16" && "$dataset" == "imagenet2012" ]]; then
+  REPO_ID="jack-perlo/Vgg16-ImageNet2012"
+elif [[ "$model" == "vit-b_16p_224" && "$dataset" == "imagenet2012" ]]; then
+  REPO_ID="jack-perlo/Vit-b_16p_224-ImageNet2012"
 else
   echo "❌ Unknown model. Exiting."
   exit 1
@@ -97,6 +123,8 @@ elif [[ "$dataset" == "cifar10" ]]; then
   TARGET_DIR="./Cifar10/models_data/${model}"
 elif [[ "$dataset" == "mnist" ]]; then
   TARGET_DIR="./Mnist/models_data/${model}"
+elif [[ "$dataset" == "gtsrb" ]]; then
+  TARGET_DIR="./Gtsrb/models_data/${model}"
 else
   # Default case for other datasets
   echo "❌ Dataset chosen has no folder in this repository. Try again."
