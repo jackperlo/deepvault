@@ -15,14 +15,12 @@ VALIDATION_LABELS_500_PATH = './datasets_data/mnist_labels/mnist_500_validation_
 
 # mnist x Lenet5 uint8 preprocessed train and validation images outputs path
 LENET5_U8_MODEL_PATH = "./models_data/lenet5/lenet5_uint8_mnist.tflite"
-LENET5_U8_TRAIN_SET_PREPROCESSED_PATH = './datasets_data/mnist_x_lenet5/uint8/mnist_u8_lenet5_training'
 LENET5_U8_VALIDATION_SET_PREPROCESSED_PATH = './datasets_data/mnist_x_lenet5/uint8/mnist_u8_lenet5_validation'
 LENET5_U8_2K_VALIDATION_SET_PREPROCESSED_PATH = './datasets_data/mnist_x_lenet5/uint8/mnist_u8_lenet5_2k_validation'
 LENET5_U8_500_VALIDATION_SET_PREPROCESSED_PATH = './datasets_data/mnist_x_lenet5/uint8/mnist_u8_lenet5_500_validation'
 
 # mnist x Lenet5 int8 preprocessed train and validation images outputs path
 LENET5_I8_MODEL_PATH = "./models_data/lenet5/lenet5_int8_mnist.tflite"
-LENET5_I8_TRAIN_SET_PREPROCESSED_PATH = './datasets_data/mnist_x_lenet5/int8/mnist_i8_lenet5_training'
 LENET5_I8_VALIDATION_SET_PREPROCESSED_PATH = './datasets_data/mnist_x_lenet5/int8/mnist_i8_lenet5_validation'
 LENET5_I8_2K_VALIDATION_SET_PREPROCESSED_PATH = './datasets_data/mnist_x_lenet5/int8/mnist_i8_lenet5_2k_validation'
 LENET5_I8_500_VALIDATION_SET_PREPROCESSED_PATH = './datasets_data/mnist_x_lenet5/int8/mnist_i8_lenet5_500_validation'
