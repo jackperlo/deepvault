@@ -5,10 +5,13 @@ import numpy as np
 import tensorflow as tf
 import matplotlib.pyplot as plt
 import torchvision
-
 from torch.utils.data import DataLoader
 
-
+current_dir = os.path.dirname(os.path.abspath(__file__))
+# Build the path to the labels file
+data_path = os.path.join(current_dir, "datasets_data", "ILSVRC2012")
+# Optionally normalize the path (especially useful on Windows)
+data_path = os.path.normpath(data_path)
 
 # determine how many batches (50k/DS_BATCH_SIZE) will be returned by the dataset
 DS_BATCH_SIZE = 10000 
@@ -27,10 +30,10 @@ N_SAMPLES = 10000
 N_TORCH_IMPORTED_MODELS_LOADED_IMAGES = 2000
 
 # path to the Imagenet validation set predicted labels file
-TXT_LABELS_PATH = './datasets_data/ILSVRC2012/labels/val.txt'
-CSV_LABELS_PATH = './datasets_data/ILSVRC2012/images/val.csv'
+TXT_LABELS_PATH = data_path+'/labels/val.txt'
+CSV_LABELS_PATH = data_path+'/images/val.csv'
 # path to the Imagenet image set file
-IMAGES_DIR_PATH = './datasets_data/ILSVRC2012/images/'
+IMAGES_DIR_PATH = data_path+'/images/'
 
 """
   TorchImageNet2012Dataset class is responsible for loading and 
