@@ -63,8 +63,8 @@ The repository is organized by dataset. Follow these steps to use a model:
 0. **Clone the repository and install requirements**
 
   ```bash
-    git clone https://github.com/jackperlo/deepvault.git
-    cd deepvault
+  git clone https://github.com/jackperlo/deepvault.git
+  cd deepvault
   ```
 
   ```bash
