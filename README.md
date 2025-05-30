@@ -15,6 +15,54 @@ My hope is that this grows into a robust pool of reusable, architecture-level mo
 
 ---
 
+### 📊 What’s Included
+
+The colormap below illustrates which pre-trained models are available for each dataset and in which precision format (`fp32`, `int8`, `uint8`).  
+All models are hosted on the **Hugging Face Hub** for easy download and integration.
+
+![Accuracy Heatmap](readme_assets/accuracy_map.png)
+
+---
+
+### 📦 How to Use
+
+You have two main options:
+
+#### 🔧 Option 1: Clone the Repository and mount the Docker Image (recommended for development/debugging)
+
+  ```bash
+  git clone https://github.com/jackperlo/deepvault.git
+  
+  cd deepvault
+  ```
+
+Mount the Docker Image:
+
+  ```bash
+  docker run --rm -it -v $(pwd):/deepvault -w /deepvault jackisback/deepvault:latest 
+  ```
+
+Use the structure and notebooks inside the repository to:
+
+- Choose datasets and models
+- Train or download pre-trained models
+- Preprocess datasets
+- Run evaluations
+
+#### 🐳 Option 2: Pull the Docker Image (Quick start, no code modification)
+
+If you don’t need to debug or modify the code, but just to execute it, pull the Docker image from Docker Hub:
+
+  ```bash
+  docker pull jackisback/deepvault:latest
+  
+  docker run --rm -it jackisback/deepvault:latest
+  ```
+
+This is the fastest way to access all scripts and resources in a clean, ready-to-use environment.
+
+---
+
 ### 📚 Included Datasets
 
 | Dataset        | Source                                                             |
@@ -49,29 +97,7 @@ The following model architectures are supported:
 
 ---
 
-### 📊 What’s Included
-
-The colormap below illustrates which pre-trained models are available for each dataset and in which precision format (`fp32`, `int8`, `uint8`).  
-All models are hosted on the **Hugging Face Hub** for easy download and integration.
-
-![Accuracy Heatmap](readme_assets/accuracy_map.png)
-
-## How to Use
-
-The repository is organized by dataset. Follow these steps to use a model:
-
-0. **Clone the repository and install requirements**
-
-  ```bash
-  git clone https://github.com/jackperlo/deepvault.git
-  cd deepvault
-  ```
-
-  ```bash
-  python -m venv venv
-  source venv/bin/activate
-  pip install -r requirements.txt
-  ```
+### 👣 Step-by-step Workflow
 
 1. **Choose a Dataset**  
   Navigate to the folder of the dataset you’re interested in. (e.g., `Mnist`)
