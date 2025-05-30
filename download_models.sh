@@ -103,7 +103,7 @@ elif [[ "$model" == "mobilenetv2" && "$dataset" == "imagenet2012" ]]; then
 elif [[ "$model" == "vgg16" && "$dataset" == "imagenet2012" ]]; then
   REPO_ID="jack-perlo/Vgg16-ImageNet2012"
 elif [[ "$model" == "vit-b_16p_224" && "$dataset" == "imagenet2012" ]]; then
-  REPO_ID="jack-perlo/Vit-b_16p_224-ImageNet2012"
+  REPO_ID="jack-perlo/ViT-b_16p_224-Imagenet2012"
 else
   echo "❌ Unknown model. Exiting."
   exit 1

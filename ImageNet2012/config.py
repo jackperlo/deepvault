@@ -1,3 +1,5 @@
+# !NOTE: constants MUST be in uppercase to be recognized by the codebase
+
 # slice of images to evaluate the models on
 N_IMAGES_SLICE = 2000
 
@@ -99,13 +101,13 @@ EFFICIENTNETB0_I8_500_VALIDATION_SET_PREPROCESSED_PATH = './datasets_data/imagen
 #============================================================
 
 # imagenet2012 x ViT-b_16p uint8 preprocessed validation images outputs path
-ViT_b_16p_224_U8_MODEL_PATH = "./models_data/ViT_b_16p_224/ViT_b_16p_224_uint8_imagenet2012.tflite"
-ViT_b_16p_224_U8_VALIDATION_SET_PREPROCESSED_PATH = './datasets_data/imagenet2012_x_ViT_b_16p_224/uint8/imagenet2012_u8_ViT_b_16p_224_validation'
-ViT_b_16p_224_U8_2K_VALIDATION_SET_PREPROCESSED_PATH = './datasets_data/imagenet2012_x_ViT_b_16p_224/uint8/imagenet2012_u8_ViT_b_16p_224_2k_validation'
-ViT_b_16p_224_U8_500_VALIDATION_SET_PREPROCESSED_PATH = './datasets_data/imagenet2012_x_ViT_b_16p_224/uint8/imagenet2012_u8_ViT_b_16p_224_500_validation'
+VIT_B_16P_224_U8_MODEL_PATH = "./models_data/vit-b_16p_224/vit-b_16p_224_uint8_imagenet2012.tflite"
+VIT_B_16P_224_U8_VALIDATION_SET_PREPROCESSED_PATH = './datasets_data/imagenet2012_x_vit-b_16p_224/uint8/imagenet2012_u8_vit-b_16p_224_validation'
+VIT_B_16P_224_U8_2K_VALIDATION_SET_PREPROCESSED_PATH = './datasets_data/imagenet2012_x_vit-b_16p_224/uint8/imagenet2012_u8_vit-b_16p_224_2k_validation'
+VIT_B_16P_224_U8_500_VALIDATION_SET_PREPROCESSED_PATH = './datasets_data/imagenet2012_x_vit-b_16p_224/uint8/imagenet2012_u8_vit-b_16p_224_500_validation'
 
 # imagenet2012 x ViT-b_16p int8 preprocessed validation images outputs path
-ViT_b_16p_224_I8_MODEL_PATH = "./models_data/ViT_b_16p/ViT_b_16p_224_int8_imagenet2012.tflite"
-ViT_b_16p_224_I8_VALIDATION_SET_PREPROCESSED_PATH = './datasets_data/imagenet2012_x_ViT_b_16p_224/int8/imagenet2012_i8_ViT_b_16p_224_validation'
-ViT_b_16p_224_I8_2K_VALIDATION_SET_PREPROCESSED_PATH = './datasets_data/imagenet2012_x_ViT_b_16p_224/int8/imagenet2012_i8_ViT_b_16p_224_2k_validation'
-ViT_b_16p_224_I8_500_VALIDATION_SET_PREPROCESSED_PATH = './datasets_data/imagenet2012_x_ViT_b_16p_224/int8/imagenet2012_i8_ViT_b_16p_224_500_validation'
+VIT_B_16P_224_I8_MODEL_PATH = "./models_data/vit-b_16p_224/vit-b_16p_224_int8_imagenet2012.tflite"
+VIT_B_16P_224_I8_VALIDATION_SET_PREPROCESSED_PATH = './datasets_data/imagenet2012_x_vit-b_16p_224/int8/imagenet2012_i8_vit-b_16p_224_validation'
+VIT_B_16P_224_I8_2K_VALIDATION_SET_PREPROCESSED_PATH = './datasets_data/imagenet2012_x_vit-b_16p_224/int8/imagenet2012_i8_vit-b_16p_224_2k_validation'
+VIT_B_16P_224_I8_500_VALIDATION_SET_PREPROCESSED_PATH = './datasets_data/imagenet2012_x_vit-b_16p_224/int8/imagenet2012_i8_vit-b_16p_224_500_validation'

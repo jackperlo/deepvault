@@ -1,3 +1,5 @@
+# !NOTE: constants MUST be in uppercase to be recognized by the codebase
+
 # quantized models top-1 accuracies on quantized mnist output file path
 MODELS_ACCURACY_PATH = './datasets_data/_models_evaluation_stats.txt'
 

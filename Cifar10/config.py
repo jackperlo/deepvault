@@ -1,3 +1,5 @@
+# !NOTE: constants MUST be in uppercase to be recognized by the codebase
+
 # slice of images to evaluate the models on
 N_IMAGES_SLICE = 2000
 

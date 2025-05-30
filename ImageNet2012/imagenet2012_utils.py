@@ -117,7 +117,7 @@ class ImageNetDataset:
       image = tf.keras.applications.resnet.preprocess_input(image)
     elif ImageNetDataset._mode == 'vgg16':
       image = tf.keras.applications.vgg16.preprocess_input(image)
-    elif ImageNetDataset._mode == 'ViT-b_16p':
+    elif ImageNetDataset._mode == 'ViT-b_16p_224':
       return image, label
     else:
       e = f"Invalid mode {ImageNetDataset._mode}, framework {ImageNetDataset._framework} not supported."
@@ -208,7 +208,7 @@ class ImageNetDataset:
                     'resnet50',
                     'resnet152',
                     'vgg16',
-                    'ViT-b_16p']:
+                    'ViT-b_16p_224']:
       e = f"Invalid mode. {mode} not supported."
       raise ValueError(e)
     if framework not in ['tensorflow', 'torch']:
