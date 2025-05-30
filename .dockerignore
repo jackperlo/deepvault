@@ -1,0 +1,50 @@
+# Byte-compiled / Python cache
+__pycache__/
+*.py[cod]
+*.so
+*.pyd
+*.pyo
+*.pkl
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Virtual environment folders
+env/
+venv/
+.venv/
+
+# Git-related
+.git/
+.gitignore
+
+# VS Code / editor config files
+.vscode/
+*.swp
+*.swo
+
+# Build / distribution artifacts
+*.egg-info/
+dist/
+build/
+
+# Logs
+*.log
+
+# Docker stuff (if you're building from repo)
+docker-compose.yml
+Dockerfile
+.dockerignore
+
+# Shell scripts or local data (if not needed in image)
+shell.sh
+*.sh
+*.csv
+*.tsv
+*.json
+data/
+datasets/
