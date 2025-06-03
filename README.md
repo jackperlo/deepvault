@@ -82,18 +82,19 @@ Only after approval can you legally download or use the dataset. For this reason
 ### 🧠 Included Models
 
 The following model architectures are supported:
-
-- `lenet5`
-- `efficientnetb0`
-- `mobilenet`
-- `mobilenetv2`
-- `vgg16`
-- `alexnet`
-- `resnet18`
-- `resnet34`
-- `resnet50`
-- `resnet152`
-- `vit-b_16p_224` (Vision Transformer)
+1.  CNNs
+  - `lenet5`
+  - `efficientnetb0`
+  - `mobilenet`
+  - `mobilenetv2`
+  - `vgg16`
+  - `alexnet`
+  - `resnet18`
+  - `resnet34`
+  - `resnet50`
+  - `resnet152`
+2. ViTs
+  - `vit-b_16p_224` (Vision Transformer)
 
 ---
 
