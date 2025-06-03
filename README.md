@@ -112,7 +112,7 @@ The following model architectures are supported:
     Run the provided `download_models.sh` shell script to download the desired model.
 
     ```bash
-    bash download.sh
+    bash download_models.sh
     ```
 
 3. **Preprocess the Dataset**  
