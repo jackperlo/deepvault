@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define available datasets
-datasets=("mnist" "imagenet2012" "cifar10", "gtsrb")
+datasets=("mnist" "imagenet2012" "cifar10" "gtsrb")
 
 #########################################
 # Step 1: Select dataset
@@ -20,13 +20,13 @@ case "$dataset" in
     models=("lenet5")
     ;;
   "imagenet2012")
-    models=("efficientnetb0" "mobilenet" "mobilenetv2" "resnet50" "resnet152" "vgg16" "vit-b_16p_224")
+    models=("efficientnetb0" "mobilenet" "mobilenetV2" "resnet50" "resnet152" "vgg16" "vit-b_16p_224")
     ;;
   "cifar10")
-    models=("alexnet" "efficientnetb0" "mobilenet" "mobilenetv2" "resnet18" "resnet34" "resnet50" "resnet152" "vgg16")
+    models=("alexnet" "efficientnetb0" "mobilenet" "mobilenetV2" "resnet18" "resnet34" "resnet50" "resnet152" "vgg16")
     ;;
   "gtsrb")
-    models=("mobilenet" "mobilenetv2" "resnet18" "resnet34")
+    models=("mobilenet" "mobilenetV2" "resnet18" "resnet34")
     ;;
   *)
     echo "❌ Unsupported dataset."
@@ -44,7 +44,7 @@ done
 # Step 3: Select precision
 #########################################
 case "$model" in
-  "lenet5"|"efficientnetb0"|"mobilenet"|"mobilenetv2"|"vgg16"|"alexnet"|'resnet18'|'resnet34'|'resnet50'|"resnet152"|"vit-b_16p_224")
+  "lenet5"|"efficientnetb0"|"mobilenet"|"mobilenetV2"|"vgg16"|"alexnet"|'resnet18'|'resnet34'|'resnet50'|"resnet152"|"vit-b_16p_224")
     precisions=("fp32" "uint8" "int8")
     ;;
   *)
@@ -86,7 +86,7 @@ elif [[ "$model" == "efficientnetb0" && "$dataset" == "cifar10" ]]; then
   REPO_ID="jack-perlo/EfficientNetB0-Cifar10"
 elif [[ "$model" == "mobilenet" && "$dataset" == "cifar10" ]]; then
   REPO_ID="jack-perlo/MobileNet-Cifar10"
-elif [[ "$model" == "mobilenetv2" && "$dataset" == "cifar10" ]]; then
+elif [[ "$model" == "mobilenetV2" && "$dataset" == "cifar10" ]]; then
   REPO_ID="jack-perlo/MobileNetV2-Cifar10"
 elif [[ "$model" == "vgg16" && "$dataset" == "cifar10" ]]; then
   REPO_ID="jack-perlo/Vgg16-Cifar10"
@@ -98,7 +98,7 @@ elif [[ "$model" == "efficientnetb0" && "$dataset" == "imagenet2012" ]]; then
   REPO_ID="jack-perlo/EfficientNetB0-ImageNet2012"
 elif [[ "$model" == "mobilenet" && "$dataset" == "imagenet2012" ]]; then
   REPO_ID="jack-perlo/MobileNet-ImageNet2012"
-elif [[ "$model" == "mobilenetv2" && "$dataset" == "imagenet2012" ]]; then
+elif [[ "$model" == "mobilenetV2" && "$dataset" == "imagenet2012" ]]; then
   REPO_ID="jack-perlo/MobileNetV2-ImageNet2012"
 elif [[ "$model" == "vgg16" && "$dataset" == "imagenet2012" ]]; then
   REPO_ID="jack-perlo/Vgg16-ImageNet2012"
