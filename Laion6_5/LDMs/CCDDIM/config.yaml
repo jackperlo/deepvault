@@ -1,0 +1,21 @@
+train_model: True
+epochs: 50
+file_name: "../../datasets_data/laion6_5_images.npy"
+
+channels: 96
+channel_multiplier: [1, 2, 3, 4]
+block_depth: 2
+emb_size: 512
+num_classes: 12
+attention_levels: [0, 0, 1, 0]
+
+precomputed_embedding: True
+save_in_drive: False
+
+batch_size: 64
+num_imgs: 36
+learning_rate: 0.0003
+
+class_guidance: 4
+MODEL_NAME: "../../models_data/CCDDM"
+ds_data_dir: "../../datasets_data"

@@ -8,9 +8,6 @@ from config import REPO_ID, FILENAME, LOCAL_DIR, IMAGES_DIR_TAR, DS_DIR, IMAGES_
 def get_dataset_from_huggingface():
   os.makedirs(LOCAL_DIR, exist_ok=True)
   os.makedirs(DS_DIR, exist_ok=True)
-  os.makedirs(IMAGES_DIR, exist_ok=True)
-  os.makedirs(CAPTIONS_CSV, exist_ok=True)
-  os.makedirs(EMBEDDINGS_CSV, exist_ok=True)
 
   if os.listdir(LOCAL_DIR):
     print(f"✅ {LOCAL_DIR} already contains data. Skipping download and extraction.")
@@ -27,14 +24,14 @@ def get_dataset_from_huggingface():
       imgs_tar.extractall(path=DS_DIR)
     print(f"✅ Decompression complete.")
 
-    shutil.move(DS_DIR+'Laion6_5_plus_115k/imgs.npy', IMAGES_DIR)
-    print(f"\n✅ Images moved to {IMAGES_DIR} ")
+    shutil.move(DS_DIR+'Laion6_5_plus_115k/imgs.npy', DS_DIR)
+    print(f"\n✅ Images moved to {DS_DIR} ")
 
-    shutil.move(DS_DIR+'Laion6_5_plus_115k/captions.csv', CAPTIONS_CSV)
-    print(f"\n✅ Captions moved to {CAPTIONS_CSV} ")
+    shutil.move(DS_DIR+'Laion6_5_plus_115k/captions.csv', DS_DIR)
+    print(f"\n✅ Captions moved to {DS_DIR} ")
 
-    shutil.move(DS_DIR+'Laion6_5_plus_115k/embeddings.npy', EMBEDDINGS_CSV)
-    print(f"\n✅ Embeddings moved to {EMBEDDINGS_CSV} ")
+    shutil.move(DS_DIR+'Laion6_5_plus_115k/embeddings.npy', DS_DIR)
+    print(f"\n✅ Embeddings moved to {DS_DIR} ")
 
     os.rmdir(DS_DIR+'Laion6_5_plus_115k')
 
