@@ -1,3 +1,6 @@
+# most of the code is adapted from:
+# https://keras.io/examples/generative/ddim/
+
 import os
 import yaml
 import numpy as np
@@ -104,7 +107,7 @@ def get_train_data(captions_path, imgs_path, embedding_path):
   return train_data, train_label_embeddings
 
 if __name__=='__main__':
-  trainer = Trainer('config.yaml')
+  trainer = Trainer('train_config.yaml')
 
   train_data, train_label_embeddings = get_train_data(trainer.captions_path, 
                                                       trainer.imgs_path, 

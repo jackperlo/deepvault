@@ -1,5 +1,5 @@
 train_model: True
-epochs: 50
+epochs: 1
 file_name: "../../datasets_data/laion6_5_images.npy"
 
 channels: 96

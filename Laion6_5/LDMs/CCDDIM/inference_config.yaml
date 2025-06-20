@@ -1,0 +1,10 @@
+MODEL_NAME: "../../models_data/CCDDM.keras"
+PROMPT: "a lake in the swiss alps" 
+
+CLASS_GUIDANCE: 5
+DIFFUSION_STEPS: 50
+SEED: 0xdeadbeef
+
+NUM_IMGS: 25
+IMAGE_SIZE: 64
+NUM_CHANNELS: 3

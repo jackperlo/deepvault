@@ -1,7 +1,7 @@
 import math
+import keras
 
 import tensorflow as tf
-from tensorflow import keras
 from keras import layers
 
 ### Only change is adding self/cross attention compared to classical U-Net.:
@@ -67,6 +67,7 @@ def cross_attention(img, text):
 
 ### The sinusoidal_embedding, ResidualBlock, Down/UP Block are taken from
 ### https://github.com/keras-team/keras-io/blob/master/examples/generative/ddim.py
+@keras.saving.register_keras_serializable()
 def sinusoidal_embedding(x):
   embedding_dims = 32
   embedding_min_frequency = 1000.0

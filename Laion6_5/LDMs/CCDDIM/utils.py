@@ -4,10 +4,10 @@ from matplotlib import pyplot as plt
 import os
 from numpy.linalg import norm
 
-#import torch
-#from torch.utils.data import DataLoader
+import torch
+from torch.utils.data import DataLoader
 
-"""
+
 def get_text_encodings(prompts, model):
   import clip
   data_loader = DataLoader(prompts, batch_size=256)
@@ -24,7 +24,6 @@ def get_text_encodings(prompts, model):
   all_encodings = torch.cat(all_encodings).cpu().numpy()
 
   return all_encodings
-"""
 
 def preprocess(array):
   """
