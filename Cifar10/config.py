@@ -32,6 +32,20 @@ ALEXNET_I8_500_VALIDATION_SET_PREPROCESSED_PATH = './datasets_data/cifar10_x_ale
 
 #============================================================
 
+# cifar10 x resnet18 uint8 preprocessed validation images outputs path
+RESNET18_U8_MODEL_PATH = "./models_data/resnet18/resnet18_uint8_cifar10.tflite"
+RESNET18_U8_VALIDATION_SET_PREPROCESSED_PATH = './datasets_data/cifar10_x_resnet18/uint8/cifar10_u8_resnet18_validation'
+RESNET18_U8_2K_VALIDATION_SET_PREPROCESSED_PATH = './datasets_data/cifar10_x_resnet18/uint8/cifar10_u8_resnet18_2k_validation'
+RESNET18_U8_500_VALIDATION_SET_PREPROCESSED_PATH = './datasets_data/cifar10_x_resnet18/uint8/cifar10_u8_resnet18_500_validation'
+
+# cifar10 x resnet18 int8 preprocessed validation images outputs path
+RESNET18_I8_MODEL_PATH = "./models_data/resnet18/resnet18_int8_cifar10.tflite"
+RESNET18_I8_VALIDATION_SET_PREPROCESSED_PATH = './datasets_data/cifar10_x_resnet18/int8/cifar10_i8_resnet18_validation'
+RESNET18_I8_2K_VALIDATION_SET_PREPROCESSED_PATH = './datasets_data/cifar10_x_resnet18/int8/cifar10_i8_resnet18_2k_validation'
+RESNET18_I8_500_VALIDATION_SET_PREPROCESSED_PATH = './datasets_data/cifar10_x_resnet18/int8/cifar10_i8_resnet18_500_validation'
+
+#============================================================
+
 # cifar10 x resnet50 uint8 preprocessed validation images outputs path
 RESNET50_U8_MODEL_PATH = "./models_data/resnet50/resnet50_uint8_cifar10.tflite"
 RESNET50_U8_VALIDATION_SET_PREPROCESSED_PATH = './datasets_data/cifar10_x_resnet50/uint8/cifar10_u8_resnet50_validation'
