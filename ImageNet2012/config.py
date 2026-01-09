@@ -1,7 +1,7 @@
 # !NOTE: constants MUST be in uppercase to be recognized by the codebase
 
 # slice of images to evaluate the models on
-N_IMAGES_SLICE = 2000
+N_IMAGES_SLICE = slice(0, 2000)
 
 # quantized models top-1 accuracies on quantized Imagenet2012 output file path
 MODELS_ACCURACY_PATH = './datasets_data/_models_evaluation_stats.txt'
