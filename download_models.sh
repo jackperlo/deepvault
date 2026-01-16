@@ -23,7 +23,7 @@ case "$dataset" in
     models=("efficientnetB0" "mobilenet" "mobilenetV2" "resnet50" "resnet152" "vgg16" "vit-b_16p_224")
     ;;
   "cifar10")
-    models=("alexnet" "efficientnetB0" "mobilenet" "mobilenetV2" "resnet18" "resnet34" "resnet50" "resnet152" "vgg16")
+    models=("alexnet" "efficientnetB0" "mobilenet" "mobilenetV2" "resnet18" "resnet34" "resnet50" "resnet152" "vgg16" "inceptionV3")
     ;;
   "gtsrb")
     models=("mobilenet" "mobilenetV2" "resnet18" "resnet34")
@@ -44,7 +44,7 @@ done
 # Step 3: Select precision
 #########################################
 case "$model" in
-  "lenet5"|"efficientnetB0"|"mobilenet"|"mobilenetV2"|"vgg16"|"alexnet"|'resnet18'|'resnet34'|'resnet50'|"resnet152"|"vit-b_16p_224")
+  "lenet5"|"efficientnetB0"|"mobilenet"|"mobilenetV2"|"vgg16"|"alexnet"|'resnet18'|'resnet34'|'resnet50'|"resnet152"|"vit-b_16p_224"|"inceptionV3")
     precisions=("fp32" "uint8" "int8")
     ;;
   *)
@@ -90,6 +90,8 @@ elif [[ "$model" == "mobilenetV2" && "$dataset" == "cifar10" ]]; then
   REPO_ID="jack-perlo/MobileNetV2-Cifar10"
 elif [[ "$model" == "vgg16" && "$dataset" == "cifar10" ]]; then
   REPO_ID="jack-perlo/Vgg16-Cifar10"
+elif [[ "$model" == "inceptionV3" && "$dataset" == "cifar10" ]]; then
+  REPO_ID="jack-perlo/InceptionV3-Cifar10"
 elif [[ "$model" == "resnet50" && "$dataset" == "imagenet2012" ]]; then
   REPO_ID="jack-perlo/ResNet50-ImageNet2012"
 elif [[ "$model" == "resnet152" && "$dataset" == "imagenet2012" ]]; then
