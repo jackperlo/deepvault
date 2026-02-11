@@ -155,3 +155,17 @@ EFFICIENTNETB0_I8_MODEL_PATH = "./models_data/efficientnetB0/efficientnetB0_int8
 EFFICIENTNETB0_I8_VALIDATION_SET_PREPROCESSED_PATH = './datasets_data/cifar10_x_efficientnetB0/int8/cifar10_i8_efficientnetB0_validation'
 EFFICIENTNETB0_I8_2K_VALIDATION_SET_PREPROCESSED_PATH = './datasets_data/cifar10_x_efficientnetB0/int8/cifar10_i8_efficientnetB0_2k_validation'
 EFFICIENTNETB0_I8_500_VALIDATION_SET_PREPROCESSED_PATH = './datasets_data/cifar10_x_efficientnetB0/int8/cifar10_i8_efficientnetB0_500_validation'
+
+#============================================================
+
+# cifar10 x efficientnetB3 uint8 preprocessed validation images outputs path
+EFFICIENTNETB3_U8_MODEL_PATH = "./models_data/efficientnetB3/efficientnetB3_uint8_cifar10.tflite"
+EFFICIENTNETB3_U8_VALIDATION_SET_PREPROCESSED_PATH = './datasets_data/cifar10_x_efficientnetB3/uint8/cifar10_u8_efficientnetB3_validation'
+EFFICIENTNETB3_U8_2K_VALIDATION_SET_PREPROCESSED_PATH = './datasets_data/cifar10_x_efficientnetB3/uint8/cifar10_u8_efficientnetB3_2k_validation'
+EFFICIENTNETB3_U8_500_VALIDATION_SET_PREPROCESSED_PATH = './datasets_data/cifar10_x_efficientnetB3/uint8/cifar10_u8_efficientnetB3_500_validation'
+
+# cifar10 x efficientnetB3 int8 preprocessed validation images outputs path
+EFFICIENTNETB3_I8_MODEL_PATH = "./models_data/efficientnetB3/efficientnetB3_int8_cifar10.tflite"
+EFFICIENTNETB3_I8_VALIDATION_SET_PREPROCESSED_PATH = './datasets_data/cifar10_x_efficientnetB3/int8/cifar10_i8_efficientnetB3_validation'
+EFFICIENTNETB3_I8_2K_VALIDATION_SET_PREPROCESSED_PATH = './datasets_data/cifar10_x_efficientnetB3/int8/cifar10_i8_efficientnetB3_2k_validation'
+EFFICIENTNETB3_I8_500_VALIDATION_SET_PREPROCESSED_PATH = './datasets_data/cifar10_x_efficientnetB3/int8/cifar10_i8_efficientnetB3_500_validation'
